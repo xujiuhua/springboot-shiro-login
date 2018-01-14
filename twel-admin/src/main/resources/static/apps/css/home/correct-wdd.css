@@ -1,0 +1,130 @@
+.u-ml-25 {
+    margin-left: 25px !important;
+}
+.u-label-100 {
+    float: left;
+    width: 100px !important;
+}
+.u-input-210 {
+    float: left;
+    width: 210px !important;
+}
+.u-label-80 {
+    float: left;
+    width: 80px !important;
+}
+.u-input-170 {
+    float: left;
+    width: 170px !important;
+}
+.u-label-60 {
+    float: left;
+    width: 60px !important;
+}
+.u-input-150 {
+    float: left;
+    width: 150px !important;
+}
+
+
+.page-content-wrapper .page-content {
+    padding: 25px 0px 0px 16px !important;
+}
+/*.layui-tab-card {*/
+    /*border: none !important;*/
+    /*box-shadow: none !important;*/
+/*}*/
+/*.layui-tab-content {*/
+    /*padding-top: 20px !important;*/
+    /*padding-left: 30px !important;*/
+    /*padding-right: 10px !important;*/
+    /*padding-bottom: 10px !important;*/
+    /*border-top: 2px solid #273A54 !important;*/
+/*}*/
+.row {
+    margin: 0 !important;
+}
+.dashboard-stat2 {
+    height: 150px !important;
+    padding-top: 20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-bottom: 10px !important;
+}
+h4 {
+    font-size: 25px !important;
+}
+.dashboard-stat2 .display .number small {
+    font-size: 15px !important;
+    color: #666 !important;
+    font-weight: 400 !important;
+}
+.dashboard-stat2, .dashboard-stat2 .display {
+    margin-bottom: 24px !important;
+}
+.dashboard-stat2 .progress-info .progress {
+    height: 10px !important;
+    border-radius: 6px !important;
+}
+.progress-bar {
+    border-radius: 6px !important;
+}
+.portlet>.portlet-title>.caption {
+    display: block !important;
+    float: none !important;
+}
+.portlet>.portlet-title>.nav-tabs {
+    float: none !important;
+}
+.portlet.light>.portlet-title>.caption>.caption-subject {
+    float: left !important;
+    color: #6e6e6e !important;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+}
+.portlet.light>.portlet-title>.caption>.caption-subject:last-child {
+    float: right !important;
+}
+.portlet.light>.portlet-title>.caption {
+    padding: 0 !important;
+    height: 35px !important;
+    line-height: 35px !important;
+    border-bottom: 1px solid #e1e1e1 !important;
+}
+.portlet>.portlet-title>.nav-tabs {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 50px !important;
+}
+.tabbable-line>.nav-tabs>li.active {
+    display: block !important;
+    height: 50px !important;
+    border-bottom: 4px solid #0271CA !important;
+}
+.portlet.light>.portlet-title>.nav-tabs>li.active>a, .portlet.light>.portlet-title>.nav-tabs>li:hover>a {
+    height: 100% !important;
+}
+.portlet.light>.portlet-title>.nav-tabs>li>a {
+    height: 100%;
+    padding: 0!important;
+    padding-left: 10px !important;
+    padding-right: 8px !important;
+    padding-top: 23px !important;
+}
+.portlet>.portlet-title>.nav-tabs>li {
+    margin-right: 48px !important;
+    font-size: 13px !important;
+    height: 100% !important;
+}
+.dashboard-stat2 .display .icon>i {
+    font-size: 50px !important;
+}
+.dashboard-stat2 .display .icon {
+    padding-top: 15px !important;
+}
+
+.portlet.light .portlet-body {
+    font-weight: 400 !important;
+}
+.fa > .layui-icon {display:none;}

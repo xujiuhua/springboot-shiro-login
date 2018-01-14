@@ -1,0 +1,131 @@
+
+###################  oa配置  ###################
+oa:
+  kaptcha-open: false #是否开启登录时验证码 (true/false)
+  file-upload-path: C:\twel\picture\  #文件上传目录(不配置的话为java.io.tmpdir目录)
+  excel-out-path: C:\twel\excel\
+  session-invalidate-time: 1800 #session失效时间 单位：秒
+  session-validation-interval: 900 #多久检测一次失效的session 单位：秒
+  adminResource: 2
+  shiro: true
+
+
+###################  项目启动端口  ###################
+server:
+  display-name: TWEL-ADMIN
+  port: 8080
+  error:
+    whitelabel:
+      enabled: false
+  compression:
+    min-response-size: 512 #压缩文件最小大小(kb)
+    enabled: true #是否压缩
+    mime-types: text/html,text/css,text/javascript,application/javascript,image/gif,image/png,image/jpg
+
+###################  spring配置  ###################
+spring:
+  mvc:
+    static-path-pattern: /static/**
+    view:
+      prefix: /view/
+      suffix: .ftl
+  freemarker:
+    template-loader-path: classpath:/view/, classpath:/templates/*
+    cache: false
+  http:
+    encoding:
+      force: true
+    converters:
+      preferred-json-mapper: fastjson
+    multipart:
+      max-request-size: 100MB #最大请求大小
+      max-file-size: 100MB #最大文件大小
+  application:
+    name: TWEL-ADMIN
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources,classpath:/static/,classpath:/public/,file:${oa.file-upload-path}
+    chain:
+      cache: true
+      gzipped: true
+    cache-period: 60
+  aop:
+    auto: true
+    proxy-target-class: false
+#spring.aop.auto=true
+#spring.aop.proxy-target-class=false
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器地址
+    host: jtdev
+    # Redis服务器连接端口
+    port: 6379
+    # 连接池配置
+    pool:
+      # 连接池最大连接数（使用负值表示没有限制）
+      max-active: 8
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-wait: -1
+      # 连接池中的最大空闲连接
+      max-idle: 8
+      # 连接池中的最小空闲连接
+      min-idle: 0
+    # 连接超时时间（毫秒）
+    timeout: 0
+  datasource:
+
+    url: jdbc:mysql://127.0.0.1:3306/jt_twel?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    # druid 配置
+    druid:
+      #初始化连接大小
+      initialSize: 8
+      #最小空闲连接数
+      minIdle: 5
+      #最大连接数
+      maxActive: 10
+      WebStatFilter:
+        enabled: true
+###################  mybatis-plus配置  ###################
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  typeAliasesPackage: com.jtech.twel.**.domain
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 2
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 2
+    #驼峰下划线转换
+    db-column-underline: true
+    #刷新mapper 调试神器
+    refresh-mapper: true
+    #数据库大写下划线转换
+    #capital-mode: true
+    #序列接口实现类配置
+    #key-generator: com.baomidou.springboot.xxx
+    #逻辑删除配置
+    logic-delete-value: 1
+    logic-not-delete-value: 0
+    #自定义填充策略接口实现
+    #meta-object-handler: com.baomidou.springboot.xxx
+    #自定义SQL注入器
+    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true #配置的缓存的全局开关
+    lazyLoadingEnabled: true #延时加载的开关
+    multipleResultSetsEnabled: true #开启的话，延时加载一个属性时会加载该对象全部属性，否则按需加载属性
+logging:
+  file: logs/t-twel-admin.log
+  level:
+    org.activiti: debug
+    com.jtech.twel: debug
+    root: info
+
+# war包部署指定ctx为常量
+war:
+  context-path: /twel

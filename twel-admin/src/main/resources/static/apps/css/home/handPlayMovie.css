@@ -1,0 +1,43 @@
+.hand-play-movie-con li {
+    display: block;
+    font-size: 12px;
+    float: left;
+    margin-left: 0px;
+    padding: 0px;
+    cursor:default;
+}
+
+.hand-play-movie-con {
+    list-style: none;
+}
+.hand-play-movie-label-con{
+	position:absolute;
+	top:20px;
+	width:100%;
+}
+.hand-play-movie-label-con .normal {
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+    color: #f8f9f7;
+    margin-left: 5px;
+    line-height: 20px;
+    background-color: #b0b6b3;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.6;
+    filter:  alpha(opacity=60);
+    font-size: 12px;
+}
+
+.hand-play-movie-label-con .normal:hover {
+	background-color: #d2d9d6;
+}
+.hand-play-movie-label-con .hand-play-active{
+    background-color:#484b50;
+    color:#fbf9f9;
+}
+.hand-play-movie-label-con .hand-play-active:hover{
+    background-color:#484b50;
+    color:#fbf9f9;
+}

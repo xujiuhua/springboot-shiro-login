@@ -1,0 +1,54 @@
+/* 
+ * Dropper v1.0.1 - 2014-11-25 
+ * A jQuery plugin for simple drag and drop uploads. Part of the Formstone Library. 
+ * http://formstone.it/dropper/ 
+ * 
+ * Copyright 2014 Ben Plum; MIT Licensed 
+ */
+
+.dropper {
+  overflow: hidden;
+}
+.dropper,
+.dropper *,
+.dropper *:before,
+.dropper *:after {
+  box-sizing: border-box;
+}
+.dropper-dropzone {
+  background: #ffffff;
+  border: 3px dashed #cccccc;
+  border-radius: 0;
+  color: #666666;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0;
+  padding: 25px;
+  text-align: center;
+}
+.dropper.dropping .dropper-dropzone,
+.no-touch .dropper:hover .dropper-dropzone {
+  background: #eeeeee;
+  border-color: #999999;
+  color: #333333;
+}
+.dropper-input {
+  position: absolute;
+  left: 100%;
+  opacity: 0;
+}
+.no-opacity .dropper-input {
+  left: -999px;
+}
+
+.demo .filelists { margin: 20px 0; }
+.demo .filelists h5 { margin: 10px 0 0; }
+
+.demo .filelist { margin: 0; padding: 10px 0; }
+.demo .filelist li { background: #fff; border-bottom: 1px solid #eee; font-size: 14px; list-style: none; padding: 5px; }
+.demo .filelist li:before { display: none; }
+.demo .filelist li .file { color: #333; }
+.demo .filelist li .progress { color: #666; float: right; font-size: 10px; text-transform: uppercase; }
+.demo .filelist li .delete { color: red; cursor: pointer; float: right; font-size: 10px; text-transform: uppercase; }
+.demo .filelist li.complete .progress { color: green; }
+.demo .filelist li.error .progress { color: red; }

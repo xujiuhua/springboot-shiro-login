@@ -1,0 +1,101 @@
+
+a {
+  color: #cf4646;
+}
+a:hover,
+a:focus {
+  color: #A62C2C;
+}
+pre {
+  border: none;
+  background-color: transparent;
+}
+
+.fnt{
+	width:100%;
+	font-size:11px;
+	margin-bottom:15px;
+	border:1px solid rgb(121,121,121);
+	padding:5px;
+	/*font-weight: bold;*/
+	margin-top: 15px;
+	font-family: "Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53", sans-serif;
+}
+.fntt{
+	width:100%;
+	font-size:12px;
+	margin-bottom:30px;
+	padding:5px;
+}
+.datagrid-header-row td{font-weight:bold;}
+.control-label{ font-size: 10px; color: #666;}
+.control-label em{ color: #ff6600; font-style: normal; margin-right: 2px;}
+
+
+.text-center {
+  text-align: center;  
+  margin-bottom:10px;
+  margin-top:5px;
+}
+.text-right {
+  text-align: right;  
+  margin-top:15px;
+	margin-right: 15px;
+	margin-bottom:5px;
+}
+.form-control{
+	height:30px;
+}
+.pline{
+	width:45px; 
+	height:10px;
+	line-height:10px; 
+	background-color:#FFFFFF; 
+	color:#000000;
+	position:absolute;
+	z-index :999;
+	margin-top:-12px;
+	margin-left:20px;
+}
+
+body {
+	background-color: #ffffff;
+}
+
+em.error {
+	color: red;
+}
+
+em.myErrorClass {
+	color: red;
+	font-size: 11px;
+	display: block;
+}
+
+/* easyui 翻页字体设置 */
+.pagination .pagination-num {
+	font-size: 12px;
+}
+
+.pagination-page-list {
+	font-size: 12px;
+}
+
+/* easyui-combobox bootstrap风格 */
+span.combo {
+	border-radius: 4px;
+	height: 30px;
+	width: 100% !important;
+}
+a.textbox-icon{
+	height: 28px;
+}
+input.textbox-text{
+	height: 30px;
+	padding: 6px 16px !important;
+	width: inherit !important;
+}
+span.numberbox{
+	border-radius: 4px;
+	width: 100% !important;
+}
